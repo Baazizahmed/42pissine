@@ -1,36 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   aff_a.c                                            :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abaaziz <abaaziz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/18 14:56:36 by abaaziz           #+#    #+#             */
-/*   Updated: 2023/07/20 14:38:05 by abaaziz          ###   ########.fr       */
+/*   Created: 2023/07/20 15:14:58 by abaaziz           #+#    #+#             */
+/*   Updated: 2023/07/20 15:32:57 by abaaziz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-int	main(int argc, char **argv)
+char	*ft_strcpy(char *s1, char *s2)
 {
 	int	i;
 
 	i = 0;
-	if (argc != 2)
+	while (s2[i]!='\0')
 	{
-		write(1, "a\n", 1);
-		return (0);
-	}
-	while (argv[1][i])
-	{
-		if (argv[1][i] == 'a')
-		{
-			write(1, "a\n", 1);
-			return (0);
-		}
+		s1[i] = s2[i];
 		i++;
 	}
-	write (1, "\n", 1);
-	return (0);
+	s1[i] = "\0";
+	return = (s1);
 }
